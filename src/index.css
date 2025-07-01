@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --color-header-text: #98a3b3;
+  --color-sanyuk-app-background: #000000;
+  --color-sanyuk-app-text: #ffffff;
+  --color-sanyuk-glass-background: #22222250;
+  --color-sanyuk-glass-border-neutral: #2d2d2d;
+  --color-sanyuk-primary: #009ccb;
+  --color-sanyuk-glass-primary: #009ccb30;
+  --color-sanyuk-text-primary: #009ccb;
+  --color-sanyuk-glass-border-primary: #005068;
+  --color-sanyuk-success-glass-background: #003f0e30;
+  --color-sanyuk-success-text: #00a624;
+  --color-sanyuk-success-border: #006422;
+  --color-sanyuk-error-glass-background: #440c0030;
+  --color-sanyuk-error-text: #b02d11;
+  --color-sanyuk-error-border: #631200;
+  --color-sanyuk-warning-glass-background: #44360030;
+  --color-sanyuk-warning-text: #b08b11;
+  --color-sanyuk-warning-border: #634200;
+  --color-sanyuk-orange-glass-background: #e7860030;
+  --color-sanyuk-orange-text: #e78600;
+  --color-sanyuk-orange-border: #6a3d00;
+  --color-sanyuk-blue-glass-background: #1294d530;
+  --color-sanyuk-blue-text: #1294d5;
+  --color-sanyuk-blue-border: #004a6e;
+  --color-sanyuk-purple-glass-border: #af7ad630;
+  --color-sanyuk-purple-text: #af7ad6;
+  --color-sanyuk-purple-border: #570194;
+  --color-sanyuk-yellow-glass-background: #cd9f2030;
+  --color-sanyuk-yellow-text: #cd9f20;
+  --color-sanyuk-yellow-border: #694d00;
+
+  --font-sanyuk-size-xxsmall: 0.5rem;
+  --font-sanyuk-size-xsmall: 0.75rem;
+  --font-sanyuk-size-small: 1rem;
+  --font-sanyuk-size-medium: 1.5rem;
+  --font-sanyuk-size-large: 2rem;
+  --font-sanyuk-size-xlarge: 2.5rem;
+  --font-sanyuk-size-xxlarge: 3rem;
+
+  --font-sanyuk-weight-light: 300;
+  --font-sanyuk-weight-normal: 400;
+  --font-sanyuk-weight-medium: 500;
+  --font-sanyuk-weight-semibold: 600;
+  --font-sanyuk-weight-bold: 700;
+
+  --radius-sanyuk-small: 0.25rem;
+  --radius-sanyuk-medium: 0.5rem;
+  --radius-sanyuk-large: 1rem;
+  --radius-sanyuk-xlarge: 1.5rem;
+  --radius-sanyuk-full: 99rem;
+
+  --blur-sanyuk-small: 0.25rem;
+  --blur-sanyuk-medium: 0.5rem;
+  --blur-sanyuk-large: 1rem;
+  --blur-sanyuk-xlarge: 1.5rem;
+
+  --shadow-sanyuk-small: 16px 1px 10px #00000005;
+  --shadow-sanyuk-medium: 2px 2px 20px #00000008;
+  --shadow-sanyuk-large: 3px 3px 30px #00000010;
+  --shadow-sanyuk-xlarge: 4px 4px 40px #00000015;
+  --shadow-sanyuk-xxlarge: 5px 5px 50px #00000020;
+
+  --transition-sanyuk-fast: 0.1s ease-in-out;
+  --transition-sanyuk-medium: 0.3s ease-in-out;
+  --transition-sanyuk-slow: 0.5s ease-in-out;
+}
+
+/*Basic app styling*/
+
+body {
+  background-color: var(--color-sanyuk-app-background);
+  color: var(--color-sanyuk-app-text);
+}
