@@ -1,94 +1,27 @@
 import "./App.css";
 import AppLayout from "./app-layout";
 import { Flex } from "./components/functional";
-
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Home, Education, Experience, Projects } from "./pages";
 function App() {
   return (
-    <AppLayout className="container">
-      <Flex
-        direction="column"
-        horizontal="center"
-        vertical="center"
-        className="subContainer"
-      >
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Homevvcvcv</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Homevvcvcv</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl text-sanyuk-primary">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-        <p className="text-2xl">Home</p>
-      </Flex>
-    </AppLayout>
+    <BrowserRouter>
+      <AppLayout className="container">
+        <Flex
+          direction="column"
+          horizontal="center"
+          vertical="center"
+          className="contentWrapper"
+        >
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </Flex>
+      </AppLayout>
+    </BrowserRouter>
   );
 }
 

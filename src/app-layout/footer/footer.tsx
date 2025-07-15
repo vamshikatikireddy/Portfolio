@@ -11,7 +11,14 @@ function Footer({ className }: FooterProps) {
       vertical="center"
       className={`${styles.footer} ${className}`}
     >
-      <p>Footer</p>
+      <Flex horizontal="center">
+        <p>@2025 Vamsi Katikireddy</p>
+      </Flex>
+      <Flex direction="column" horizontal="center">
+        <h3>Contact</h3>
+        <p>Katikireddy.vamshi@gmail.com</p>
+        <p>+91 9553111696</p>
+      </Flex>
     </Flex>
   );
 }
