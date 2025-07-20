@@ -1,5 +1,6 @@
 import styles from "./style.module.css";
 import { Flex } from "../../components/functional";
+import { IoCall, IoMail } from "react-icons/io5";
 interface FooterProps {
   className?: string;
 }
@@ -11,13 +12,20 @@ function Footer({ className }: FooterProps) {
       vertical="center"
       className={`${styles.footer} ${className}`}
     >
-      <Flex horizontal="center">
-        <p>@2025 Vamsi Katikireddy</p>
-      </Flex>
       <Flex direction="column" horizontal="center">
-        <h3>Contact</h3>
-        <p>Katikireddy.vamshi@gmail.com</p>
-        <p>+91 9553111696</p>
+        <div className={styles.phoneDetails}>
+          <h3>Contact me</h3>
+          <Flex direction="row" horizontal="center" gap="1rem">
+            <IoCall />
+            <p>+91 9553111696</p>
+          </Flex>
+          <a href="mailto:Katikireddy.vamshi@gmail.com">
+            <Flex direction="row" horizontal="center" gap="1rem">
+              <IoMail />
+              <p>Katikireddy.vamshi@gmail.com</p>
+            </Flex>
+          </a>
+        </div>
       </Flex>
     </Flex>
   );

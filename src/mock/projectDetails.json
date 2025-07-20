@@ -1,0 +1,14 @@
+[
+  {
+    "projectName": "PCAT – Product Competitive Analysis Tool | Full Stack",
+    "technologiesUsed": "React JS, Node JS, MS SQL, Git",
+    "projectDescription": "Developed a web application for leading technology companies' shareholders, enabling comparisons of various products with both internal offerings and competitor products. The aim is to identify high-performing models and derive valuable business insights from comparative analysis.",
+    "DescriptionPoints": [
+      "Built custom components using React JS.",
+      "Implemented State Management using React Context API.",
+      "Redesigned the home screen, introduced Figma for design discussions, and proposed new features, saving time and improving the user experience.",
+      "Successfully implemented features like customized hot response emails, error handling, bug fixes, and code centralization. Improvising the existing functionalities to enhance the application.",
+      "Collaborated on frontend architecture planning and data processing improvements, making deployments and bug fixes error-free."
+    ]
+  }
+]

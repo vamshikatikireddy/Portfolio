@@ -22,13 +22,14 @@ function Header({ className }: HeaderProps) {
       <Flex
         direction="row"
         horizontal="center"
+        vertical="center"
         className={styles.headerContainer}
       >
-        <Flex horizontal="left" className={styles.logo}>
+        <div className={styles.logo}>
           <a href="/home">
             <img src="./logo.png" alt="Logo" className={styles.logoImage} />
           </a>
-        </Flex>
+        </div>
         <Flex direction="row" horizontal="right" className={styles.nav}>
           <ul className={styles.menuList}>
             {menuItems.map((item) => (

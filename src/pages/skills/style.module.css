@@ -1,0 +1,22 @@
+.images {
+  width: 4rem;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+}
+.title {
+  font-size: 3rem;
+}
+.skillColumn {
+  width: 50%;
+}
+.skillList {
+  list-style: none;
+}
+
+.skillName {
+  font-size: 1rem;
+}

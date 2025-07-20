@@ -1,0 +1,22 @@
+[
+  {
+    "companyName": "Wipro Limited",
+    "position": "Project Engineer(Frontend Developer)",
+    "duration": "2022 - present",
+    "location": "Hyderabad",
+    "description": {
+      "UI Development & Design Implementation": [
+        "Built, tested, and deployed highly responsive user interfaces using React.js and TypeScript, directly contributing to enhanced user engagement.",
+        "Converted high-fidelity Figma mockups into functional, pixel-perfect web components using MUI and Tailwind CSS."
+      ],
+      "Application Architecture & Performance": [
+        "Improved overall application efficiency by analyzing performance bottlenecks, optimizing critical functions, and refactoring code for scalability.",
+        "Managed complex application state with Redux and Context API, ensuring data consistency across the platform."
+      ],
+      "API Integration & Collaboration": [
+        "Integrated a wide range of RESTful APIs for fetching and manipulating data, ensuring seamless front-to-back communication.",
+        "Utilized Git for version control, managing branching and merging strategies to support team collaboration and CI/CD pipelines."
+      ]
+    }
+  }
+]

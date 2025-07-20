@@ -1,0 +1,34 @@
+.title {
+  font-size: 3rem;
+}
+
+.companyDetails {
+  font-size: 1.5rem;
+}
+
+.experienceContent {
+  width: 100%;
+}
+
+.collegeImage {
+  padding: 1rem 0 0 5rem;
+  width: 100%;
+}
+
+.descriptionContainer ul {
+  padding-left: 20px;
+  margin-top: 0.5rem;
+}
+
+.descriptionContainer li {
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+.descriptionContainer li strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.descriptionContainer > ul > li {
+  list-style-type: none;
+}

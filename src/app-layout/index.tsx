@@ -3,7 +3,6 @@ import Header from "./header/header";
 import Footer from "./footer/footer";
 import styles from "./layout.module.css";
 import Background from "./background";
-import { Flex } from "../components/functional";
 
 interface AppLayoutProps {
   children: React.ReactNode;

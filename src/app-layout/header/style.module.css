@@ -1,4 +1,5 @@
 .header {
+  padding: 3rem;
   width: 100%;
   height: 2rem;
   position: sticky;
@@ -9,27 +10,13 @@
 .headerContainer {
   max-width: 100%;
   padding: 0 2rem;
-  height: 10px;
-  width: 10px;
 }
 
 .logoImage {
-  width: 50px;
-  height: 30px;
-}
-.logo a {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-header-text);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-.logo a:hover {
-  color: #3b82f6;
-}
-
-.nav {
-  height: 100%;
+  width: 7rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .menuList {

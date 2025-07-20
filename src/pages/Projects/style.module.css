@@ -1,0 +1,27 @@
+.container {
+}
+.title {
+  font-size: 3rem;
+}
+
+.projectTitle {
+  font-size: 2rem;
+}
+
+.technologiesUsed {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.projectDescription {
+  font-size: 1rem;
+}
+
+.descriptionContainer {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.descriptionContainer li {
+  margin-bottom: 0.5rem;
+}
