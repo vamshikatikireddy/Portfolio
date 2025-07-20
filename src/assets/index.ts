@@ -11,7 +11,7 @@ import pcatimg from "./pcatimg.png";
 import collegeImage from "./collegePic.webp";
 import wiproImage from "./wiproLogo.png";
 import mui from "./icons/mui-1.svg";
-import myPicture from "./mypicture.jpg";
+import myPicture from "./mypicture.png";
 
 export {
   react,
