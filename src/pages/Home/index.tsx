@@ -1,6 +1,6 @@
 import styles from "./style.module.css";
 import { Flex } from "../../components/functional";
-import myphoto from "../../assets/mypicture.jpg";
+import { myPicture } from "../../assets/";
 function Home() {
   return (
     <div className={styles.container}>
@@ -34,7 +34,7 @@ function Home() {
             horizontal="center"
             gap="1rem"
           >
-            <img src={myphoto} alt="Logo" className={styles.myPicture} />
+            <img src={myPicture} alt="Logo" className={styles.myPicture} />
           </Flex>
         </Flex>
       </Flex>

@@ -3,8 +3,14 @@ import styles from "./style.module.css";
 import { projectDetails } from "../../mock";
 import projectImage from "../../assets/pcatimg.png";
 
+interface Project {
+  projectName: string;
+  technologiesUsed: string;
+  projectDescription: string;
+  DescriptionPoints: string[];
+}
 const Projects = () => {
-  const project = projectDetails[0] || {};
+  const project: Project = projectDetails[0] || {};
 
   return (
     <Flex direction="column" className={styles.container}>
