@@ -1,68 +1,66 @@
 import style from "./style.module.css";
 import { Flex } from "../../components/functional";
-import wiproImage from "../../assets/wiproLogo.png";
-import { experienceDescription, companyDetails } from "../../mock";
+import { companyDetails, wiproImage } from "../../mock";
 
-interface ExperienceProps {
-  experienceDescription: {
-    title: string;
-    description: string;
-  }[];
+// --- 1. Define accurate TypeScript interfaces for your data ---
+type Description = Record<string, string[]>;
 
-  companyDetails: {
-    companyName: string;
-    position: string;
-    duration: string;
-    location: string;
-    description: string;
-  }[];
+interface Company {
+  companyName: string;
+  position: string;
+  duration: string;
+  location: string;
+  description: Description;
+  image: string;
 }
+
 const Experience = () => {
-  const jobDescription = experienceDescription || ({} as ExperienceProps);
-  const companyInfo = companyDetails || ({} as ExperienceProps);
+  // --- 2. Correctly initialize your data with a safe fallback ---
+  const companies: Company[] = companyDetails || [];
+
+  // --- 3. Create a config array to avoid repetitive JSX ---
+  const companyDetailItems = [
+    { label: "Company", key: "companyName" as const },
+    { label: "Position", key: "position" as const },
+    { label: "Duration", key: "duration" as const },
+    { label: "Location", key: "location" as const },
+    { label: "Image", key: "image" as const },
+  ];
 
   return (
     <div className={style.container}>
-      <Flex direction="column">
+      <Flex direction="row" gap="2rem">
         <Flex direction="column" gap="1rem" className={style.experienceContent}>
-          <Flex direction="column">
-            <h1 className={style.title}>Experience</h1>
-          </Flex>
-          <Flex direction="row" gap="1rem">
-            <Flex direction="column">
-              {companyInfo.map((company, index) => (
-                <Flex key={index} direction="column">
-                  <h1 className={style.companyDetails}>
-                    <strong>Company</strong> : {company.companyName}
-                  </h1>
-                  <h1 className={style.companyDetails}>
-                    <strong>Position</strong> : {company.position}
-                  </h1>
-                  <h1 className={style.companyDetails}>
-                    <strong>Duration</strong> : {company.duration}
-                  </h1>
-                  <h1 className={style.companyDetails}>
-                    <strong>Location</strong> : {company.location}
-                  </h1>
-                </Flex>
+          <h1 className={style.title}>Experience</h1>
+
+          {/* --- 4. Main loop over each company in your data --- */}
+          {companies.map((company) => (
+            <Flex
+              key={company.companyName}
+              direction="column"
+              className={style.companySection}
+            >
+              {/* Loop over the config array to render company details */}
+              {companyDetailItems.map((item) => (
+                <h1 key={item.key} className={style.companyDetails}>
+                  <strong>{item.label}</strong> : {company[item.key]}
+                </h1>
               ))}
+
+              {/* --- 5. Description section is now INSIDE the company loop --- */}
               <h1 className={style.companyDetails}>
                 <strong>Description</strong> :
               </h1>
-
               <div className={style.descriptionContainer}>
-                {companyInfo.description}
-
-                <p>{companyInfo.description}</p>
-
                 <ul>
-                  {Object.entries(jobDescription).map(
-                    ([section, index], sectionIndex) => (
-                      <li key={sectionIndex}>
+                  {/* --- 6. Correctly map over the nested description object for THIS company --- */}
+                  {Object.entries(company.description).map(
+                    ([section, points]) => (
+                      <li key={section}>
                         <strong>{section}</strong>
                         <ul>
-                          {index.map((point: string, pointIndex: number) => (
-                            <li key={pointIndex}>{point}</li>
+                          {points.map((point, index) => (
+                            <li key={index}>{point}</li>
                           ))}
                         </ul>
                       </li>
@@ -71,11 +69,15 @@ const Experience = () => {
                 </ul>
               </div>
             </Flex>
-            <Flex direction="column" className={style.collegeImage}>
-              {/* Add descriptive alt text for accessibility */}
-              <img src={wiproImage} alt="Wipro company logo" />
-            </Flex>
-          </Flex>
+          ))}
+        </Flex>
+
+        <Flex direction="column" className={style.collegeImage}>
+          {companies.map((company) =>
+            company.image == "wiproImage" ? (
+              <img src={wiproImage} alt="Work experience graphic" />
+            ) : null
+          )}
         </Flex>
       </Flex>
     </div>
